@@ -8,11 +8,11 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-
 import java.util.List;
 import java.util.UUID;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class PlayerListPacket extends BedrockPacket {
     private final List<Entry> entries = new ObjectArrayList<>();
@@ -32,8 +32,8 @@ public class PlayerListPacket extends BedrockPacket {
         REMOVE
     }
 
-    @ToString
     @Data
+    @ToString(callSuper = true, includeFieldNames = true)
     @EqualsAndHashCode(doNotUseGetters = true)
     public final static class Entry {
         private final UUID uuid;

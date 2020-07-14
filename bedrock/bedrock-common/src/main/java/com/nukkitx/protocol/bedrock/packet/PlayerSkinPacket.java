@@ -6,10 +6,11 @@ import com.nukkitx.protocol.bedrock.data.skin.SerializedSkin;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 import java.util.UUID;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class PlayerSkinPacket extends BedrockPacket {
     private UUID uuid;

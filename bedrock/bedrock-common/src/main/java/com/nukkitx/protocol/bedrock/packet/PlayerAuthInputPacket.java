@@ -9,8 +9,9 @@ import com.nukkitx.protocol.bedrock.data.InputMode;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class PlayerAuthInputPacket extends BedrockPacket {
     private Vector3f rotation; // head rot after motion

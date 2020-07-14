@@ -7,10 +7,11 @@ import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 import java.util.Set;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class EmotePacket extends BedrockPacket {
     private long runtimeEntityId;

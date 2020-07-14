@@ -6,11 +6,12 @@ import com.nukkitx.protocol.bedrock.data.inventory.EnchantOptionData;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(callSuper = false)
 public class PlayerEnchantOptionsPacket extends BedrockPacket {
     private final List<EnchantOptionData> options = new ArrayList<>();

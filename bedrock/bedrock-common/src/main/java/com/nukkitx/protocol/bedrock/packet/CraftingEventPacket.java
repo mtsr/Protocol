@@ -8,11 +8,12 @@ import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 import java.util.List;
 import java.util.UUID;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class CraftingEventPacket extends BedrockPacket {
     private final List<ItemData> inputs = new ObjectArrayList<>();

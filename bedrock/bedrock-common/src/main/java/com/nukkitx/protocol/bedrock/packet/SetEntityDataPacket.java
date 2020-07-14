@@ -6,8 +6,9 @@ import com.nukkitx.protocol.bedrock.data.entity.EntityDataMap;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class SetEntityDataPacket extends BedrockPacket {
     private final EntityDataMap metadata = new EntityDataMap();

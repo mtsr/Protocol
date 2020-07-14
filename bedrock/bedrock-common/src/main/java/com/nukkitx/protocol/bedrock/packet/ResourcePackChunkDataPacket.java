@@ -6,12 +6,11 @@ import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-
 import java.util.UUID;
 
 @Data
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
-@ToString(exclude = {"data"})
+@ToString(callSuper = true, includeFieldNames = true, exclude = {"data"})
 public class ResourcePackChunkDataPacket extends BedrockPacket {
     private UUID packId;
     private String packVersion;

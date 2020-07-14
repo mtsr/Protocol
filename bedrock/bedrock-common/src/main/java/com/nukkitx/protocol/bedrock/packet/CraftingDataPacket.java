@@ -10,11 +10,10 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
-
 import java.util.List;
 
 @Data
-@ToString
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class CraftingDataPacket extends BedrockPacket {
     private final List<CraftingData> craftingData = new ObjectArrayList<>();

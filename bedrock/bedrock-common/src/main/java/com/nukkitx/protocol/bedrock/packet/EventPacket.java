@@ -6,8 +6,9 @@ import com.nukkitx.protocol.bedrock.data.event.EventData;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class EventPacket extends BedrockPacket {
     private long uniqueEntityId;

@@ -8,11 +8,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(callSuper = false)
 public class ItemStackRequestPacket extends BedrockPacket {
     private final List<Request> requests = new ArrayList<>();

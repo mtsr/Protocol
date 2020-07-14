@@ -7,7 +7,7 @@ import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import it.unimi.dsi.fastutil.ints.Int2ObjectLinkedOpenHashMap;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 import java.util.Map;
 
 
@@ -17,6 +17,7 @@ import java.util.Map;
  * creative inventory window ID.
  */
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class CreativeContentPacket extends BedrockPacket {
     /**

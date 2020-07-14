@@ -6,9 +6,11 @@ import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import io.netty.util.AsciiString;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @Data
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
+@ToString(callSuper = true, includeFieldNames = true)
 public class SubClientLoginPacket extends BedrockPacket {
     private AsciiString chainData;
     private AsciiString skinData;

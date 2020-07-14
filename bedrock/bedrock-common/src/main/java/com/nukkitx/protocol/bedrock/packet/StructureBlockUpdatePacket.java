@@ -7,8 +7,9 @@ import com.nukkitx.protocol.bedrock.data.structure.StructureEditorData;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class StructureBlockUpdatePacket extends BedrockPacket {
     private Vector3i blockPosition;

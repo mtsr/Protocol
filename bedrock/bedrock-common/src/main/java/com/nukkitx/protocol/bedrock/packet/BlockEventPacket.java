@@ -6,7 +6,7 @@ import com.nukkitx.protocol.bedrock.BedrockPacketType;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 /**
  * Used to trigger Note blocks, Chests and End Gateways
  *
@@ -39,6 +39,7 @@ import lombok.EqualsAndHashCode;
  *
  **/
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class BlockEventPacket extends BedrockPacket {
 

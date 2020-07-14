@@ -6,11 +6,12 @@ import com.nukkitx.protocol.bedrock.data.PlayerArmorDamageFlag;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 import java.util.EnumSet;
 import java.util.Set;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class PlayerArmorDamagePacket extends BedrockPacket {
     private final Set<PlayerArmorDamageFlag> flags = EnumSet.noneOf(PlayerArmorDamageFlag.class);

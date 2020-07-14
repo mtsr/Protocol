@@ -7,11 +7,12 @@ import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
-
+import lombok.ToString;
 import java.util.List;
 import java.util.UUID;
 
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class SetScoreboardIdentityPacket extends BedrockPacket {
     private final List<Entry> entries = new ObjectArrayList<>();

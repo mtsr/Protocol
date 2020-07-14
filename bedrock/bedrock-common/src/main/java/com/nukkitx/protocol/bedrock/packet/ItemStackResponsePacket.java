@@ -6,7 +6,7 @@ import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Value;
-
+import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +17,7 @@ import java.util.List;
  * should be in sync with the server again.
  */
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(callSuper = false)
 public class ItemStackResponsePacket extends BedrockPacket {
     private final List<Response> entries = new ArrayList<>();

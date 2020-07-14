@@ -6,8 +6,9 @@ import com.nukkitx.protocol.bedrock.data.NpcRequestType;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class NpcRequestPacket extends BedrockPacket {
     private long runtimeEntityId;

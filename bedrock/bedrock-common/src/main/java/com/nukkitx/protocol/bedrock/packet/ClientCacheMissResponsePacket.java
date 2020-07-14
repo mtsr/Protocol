@@ -7,8 +7,9 @@ import it.unimi.dsi.fastutil.longs.Long2ObjectMap;
 import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
+import lombok.ToString;
 @Data
+@ToString(callSuper = true, includeFieldNames = true)
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
 public class ClientCacheMissResponsePacket extends BedrockPacket {
     private final Long2ObjectMap<byte[]> blobs = new Long2ObjectOpenHashMap<>();

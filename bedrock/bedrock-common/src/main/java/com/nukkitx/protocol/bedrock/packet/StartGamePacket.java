@@ -16,12 +16,11 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.Value;
-
 import java.util.List;
 
 @Data
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
-@ToString(exclude = {"itemEntries", "blockPalette"})
+@ToString(callSuper = true, includeFieldNames = true, exclude = {"itemEntries", "blockPalette"})
 public class StartGamePacket extends BedrockPacket {
     private static final InternalLogger log = InternalLoggerFactory.getInstance(StartGamePacket.class);
 

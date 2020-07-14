@@ -5,9 +5,11 @@ import com.nukkitx.protocol.bedrock.BedrockPacketType;
 import com.nukkitx.protocol.bedrock.handler.BedrockPacketHandler;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @Data
 @EqualsAndHashCode(doNotUseGetters = true, callSuper = false)
+@ToString(callSuper=true, includeFieldNames=true)
 public class PlayStatusPacket extends BedrockPacket {
     private Status status;
 
