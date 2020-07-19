@@ -191,7 +191,7 @@ public abstract class BedrockSession implements MinecraftSession<BedrockPacket> 
         if (!secretKey.getAlgorithm().equals("AES")) {
             throw new IllegalArgumentException("Invalid key algorithm");
         }
-        if (this.encryptionCipher != null || this.decryptionCipher != null) {
+        if (isEncrypted()) {
             throw new IllegalStateException("Encryption has already been enabled");
         }
 
